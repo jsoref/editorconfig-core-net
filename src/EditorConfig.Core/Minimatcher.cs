@@ -481,7 +481,7 @@ namespace EditorConfig.Core
 
       private bool CheckDot(int dotPos)
       {
-        // .x should not match neither *x, nor **x, nor ?x, unless
+        // .x should match neither *x, nor **x, nor ?x, unless
         // myOptions.Dot is set.
         // . and .. are *never* matched by *, ** or ?, for explosively
         // exponential reasons.
