@@ -110,11 +110,11 @@ let validateSignedAssembly = fun name ->
     let token = (tokenMessage.Replace("Public key token is", "")).Trim();
 
     let valid = (out.ExitCode, token)
-    let oficialToken = "fe6ce3ea283749f2"
+    let officialToken = "fe6ce3ea283749f2"
     match valid with
-    | (0, t) when t = oficialToken  -> 
+    | (0, t) when t = officialToken  -> 
       trace (sprintf "%s was signed with official key token %s" name t) 
-    | (_, t) -> traceFAKE "%s was not signed with the official token: %s but %s" name oficialToken t
+    | (_, t) -> traceFAKE "%s was not signed with the official token: %s but %s" name officialToken t
 
 let nugetPack = fun _ ->
     let package = @"build\nuget.nuspec"
