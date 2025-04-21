@@ -176,7 +176,7 @@ let getAssemblyVersion = (fun _ ->
   
     match (assemblySuffix, version.Minor, version.Patch) with
     | (s, m, p) when s <> "" && s <> "ci" && (m <> 0 || p <> 0)  -> failwithf "Cannot create prereleases for minor or major builds!"
-    | ("", _, _) -> traceFAKE "Building fileversion %s for asssembly version %s" fileVersion assemblyVersion
+    | ("", _, _) -> traceFAKE "Building fileversion %s for assembly version %s" fileVersion assemblyVersion
     | _ -> traceFAKE "Building prerelease %s for major assembly version %s " fileVersion assemblyVersion
 
     assemblyVersion
