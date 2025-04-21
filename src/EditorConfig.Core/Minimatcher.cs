@@ -780,7 +780,7 @@ namespace EditorConfig.Core
       // {b,c{d,e},{f,g}h}x{y,z}
       // walk through the set, expanding each part, until
       // the set ends.  then, we'll expand the suffix.
-      // If the set only has a single member, then'll put the {} back
+      // If the set only has a single member, then we'll put the {} back
 
       // first, handle numeric sets, since they're easier
       var numset = ourNumericSet.Match(pattern);
