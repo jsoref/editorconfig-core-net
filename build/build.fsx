@@ -43,7 +43,7 @@ Target "BuildApp" (fun _ ->
       ("Configuration","Release"); 
     ]
 
-    //Compile each csproj and output it seperately in build/output/PROJECTNAME
+    //Compile each csproj and output it separately in build/output/PROJECTNAME
     !! "src/**/*.csproj"
       |> Seq.map(fun f -> (f, buildDir + directoryInfo(f).Name.Replace(".csproj", "")))
       |> Seq.iter(fun (f,d) -> MSBuild d "Build" msbuildProperties (seq { yield f }) |> ignore)
