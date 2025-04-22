@@ -47,10 +47,10 @@ namespace EditorConfig.Core
     ///<summary>If set, then patterns without slashes will be matched against the basename of the path if it contains slashes. For example, <c>a?b</c> would match the path <c>/xyz/123/acb</c>, but not <c>/xyz/acb/123</c>.</summary>
     public bool MatchBase { get; set; }
 
-    ///<summary>If true, backslahes in paths will be treated as forward slashes.</summary>
+    ///<summary>If true, backslashes in paths will be treated as forward slashes.</summary>
     public bool AllowWindowsPaths { get; set; }
 
-    ///<summary>If true, backslahes in patterns will be treated as forward slashes. This disables escape characters.</summary>
+    ///<summary>If true, backslashes in patterns will be treated as forward slashes. This disables escape characters.</summary>
     public bool AllowWindowsPathsInPatterns { get; set; }
   }
 
